@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* oklch */
+    --bg-dark: oklch(0.15 0.035 130);
+    --bg: oklch(0.2 0.035 130);
+    --bg-light: oklch(0.25 0.035 130);
+    --text: oklch(0.96 0.07 130);
+    --text-muted: oklch(0.76 0.07 130);
+    --highlight: oklch(0.5 0.07 130);
+    --border: oklch(0.4 0.07 130);
+    --border-muted: oklch(0.3 0.07 130);
+    --primary: oklch(0.76 0.1 130);
+    --secondary: oklch(0.76 0.1 310);
+    --danger: oklch(0.7 0.07 30);
+    --warning: oklch(0.7 0.07 100);
+    --success: oklch(0.7 0.07 160);
+    --info: oklch(0.7 0.07 260);
+
+    --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+
+    --ff: "Manrope", sans-serif;
+    --h1: 700 1.5rem / 1.2em var(--ff);
+    --h2: 700 1.25rem / 1.2em var(--ff);
+    --h3: 700 1.125rem / 1.4em var(--ff);
+    --h4: 700 1rem / 1.6em var(--ff);
+    --p: 400 1rem / 1.6em var(--ff);
+    --span: 300 1rem / 1.2em var(--ff);
+}
+body.light {
+    /* oklch */
+    --bg-dark: oklch(0.92 0.035 130);
+    --bg: oklch(0.96 0.035 130);
+    --bg-light: oklch(1 0.035 130);
+    --text: oklch(0.15 0.07 130);
+    --text-muted: oklch(0.4 0.07 130);
+    --highlight: oklch(1 0.07 130);
+    --border: oklch(0.6 0.07 130);
+    --border-muted: oklch(0.7 0.07 130);
+    --primary: oklch(0.4 0.1 130);
+    --secondary: oklch(0.4 0.1 310);
+    --danger: oklch(0.5 0.07 30);
+    --warning: oklch(0.5 0.07 100);
+    --success: oklch(0.5 0.07 160);
+    --info: oklch(0.5 0.07 260);
+
+    --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    color: var(--text-muted);
+}
+
+
+h1 {
+    font: var(--h1);
+    color: var(--text);
+}
+h2 {
+    font: var(--h2);
+    color: var(--text);
+}
+h3 {
+    font: var(--h3);
+    color: var(--text);
+}
+h4 {
+    font: var(--h4);
+    color: var(--text);
+}
+p {
+    font: var(--p);
+    color: var(--text-muted);
+}
+span {
+    font: var(--span);
+    color: var(--text-muted);
+}
+
+
+body {
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    padding: 1.25em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+section {
+    width: min(1800px, 85vw);
+}
+
+
+.grid-1 {
+    grid-area: module-1;
+}
+.grid-2 {
+    grid-area: module-2;
+}
+.grid-3 {
+    grid-area: module-3;
+}
+.grid-4 {
+    grid-area: module-4;
+}
+.grid-5 {
+    grid-area: module-5;
+}
+.grid-6 {
+    grid-area: module-6;
+}
+.grid-7 {
+    grid-area: module-7;
+}
+.grid-8 {
+    grid-area: module-8;
+}
+.empty {
+    grid-area: empty;
+    display: none;
+}

@@ -1,0 +1,39 @@
+{   
+    "name": "Default",
+    "modules": {
+        "module-1": {
+            "id": "id1",
+            "version": "tall"
+        },
+        "module-2": {
+            "id": "id2",
+            "version": "wide"
+        },
+        "module-3": {
+            "id": "id3",
+            "version": "tall"
+        },
+        "module-4": {
+            "id": "id4",
+            "version": "small"
+        },
+        "module-5": {
+            "id": "id5",
+            "version": "small"
+        }
+    },
+    "layout": {
+        "row-1": {
+            "column-1":"module-1",
+            "column-2":"module-2",
+            "column-3":"module-2",
+            "column-4":"module-3"
+        },
+        "row-2": {
+            "column-1":"module-1",
+            "column-2":"module-4",
+            "column-3":"module-5",
+            "column-4":"module-3"
+        }
+    }
+}

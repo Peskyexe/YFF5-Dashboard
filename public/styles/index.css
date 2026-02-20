@@ -1,0 +1,92 @@
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+nav section {
+    background: var(--gradient);
+    box-shadow: var(--shadow);
+    border-radius: 1.25em;
+    padding: 0.75em 1.25em; 
+}
+
+nav section > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    height: fit-content ;
+}
+
+nav button {
+    aspect-ratio: 1 / 1;
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+    transition: 0.1s ease;
+    box-shadow: var(--shadow);
+}
+nav button:hover {
+    background-color: var(--border);
+    border-color: var(--border);
+}
+nav button:focus {
+    outline: none;
+}
+nav button:active {
+    background-color: var(--border-muted);
+    border-color: var(--border-muted);
+}
+
+
+nav button i {
+    color: var(--text-muted);
+    font-size: 1.75em;
+}
+
+.module-container {
+    background: var(--gradient);
+    box-shadow: var(--shadow);
+    border-radius: 1.25em;
+    aspect-ratio: 2 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.75em;
+    padding: 1.25em;
+}
+
+.module {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75em;
+}
+.module p {
+    font-size: 1.75em; 
+    color: var(--bg-light);
+}
+
+#module-1 {
+    background-color: oklch(0.5 0.06 30);
+}
+#module-2 {
+    background-color: oklch(0.5 0.06 90);
+}
+#module-3 {
+    background-color: oklch(0.5 0.06 150);
+}
+#module-4 {
+    background-color: oklch(0.5 0.06 210);
+}
+#module-5 {
+    background-color: oklch(0.5 0.06 270);
+}
+#module-6 {
+    background-color: oklch(0.5 0.06 330);
+}
