@@ -3,13 +3,13 @@ import { loadModules } from "./modules.js";
 const presetDropdownItems = document.querySelectorAll(".dropdown-item")
 var activePreset = { };
 
-const defaultPresetId = "0";
+const defaultPresetId = "3";
 activePreset = await getPreset(defaultPresetId);
 
 
 // Funksjon for å hente in en preset fra serveren ved bruk av egen API
 async function getPreset(id) {
-    const response = await fetch(`/api/preset?id=${id}`);
+    const response = await fetch(`/api/core/preset?id=${id}`);
 
     if (!response.ok) {
         throw new Error("Network error");
@@ -21,11 +21,8 @@ async function getPreset(id) {
 
 
 // Funksjon som endrer det aktive presete
-function changeActivePreset(newPresetId) {
-    const newPreset = getPreset(newPresetId);
-    newPreset.then((value) => {
-        activePreset = value;
-    })
+async function changeActivePreset(newPresetId) {
+    activePreset = await getPreset(newPresetId);
 }
 
 
@@ -37,12 +34,12 @@ function createModulesArray(preset) {
 
 
 presetDropdownItems.forEach(item => {
-    item.addEventListener('click', (event) => {
+    item.addEventListener('click', async (event) => {
         event.stopPropagation();
 
         const value = item.dataset.value;
 
-        changeActivePreset(value.toString())
+        await changeActivePreset(value.toString())
         loadModules(activePreset);
     })
 })

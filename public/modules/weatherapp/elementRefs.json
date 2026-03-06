@@ -1,0 +1,58 @@
+{
+    "current": [
+        {
+            "name": "weather",
+            "class": "weatherapp-current-weather"
+        },
+        {
+            "name": "temperature",
+            "class": "weatherapp-current-temperature"
+        },
+        {
+            "name": "temperatureFeel",
+            "class": "weatherapp-current-temperature-feel"
+        },
+        {
+            "name": "precipitationAvg",
+            "class": "weatherapp-current-precipitation-avg"
+        },
+        {
+            "name": "windSpeed",
+            "class": "weatherapp-current-wind-speed"
+        },
+        {
+            "name": "windGustSpeed",
+            "class": "weatherapp-current-wind-gust-speed"
+        },
+        {
+            "name": "windDirection",
+            "class": "weatherapp-current-wind-arrow"
+        }
+    ],
+    "table": [
+        {
+            "name": "timeHour",
+            "class": "weatherapp-cell-time"
+        },
+        {
+            "name": "weather",
+            "class": "weatherapp-cell-weather"
+        },
+        {
+            "name": "temperature",
+            "class": "weatherapp-cell-temperature"
+        },
+        {
+            "name": "precipitationFull",
+            "class": "weatherapp-cell-precipitation-full"
+        },
+        {
+            "name": "windFull",
+            "class": "weatherapp-cell-wind-full"
+        },
+        {
+            "name": "windDirection",
+            "class": "weatherapp-cell-wind-arrow"
+        }
+    ]
+}

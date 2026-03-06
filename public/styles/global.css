@@ -2,49 +2,49 @@
 
 :root {
     /* oklch */
-    --bg-dark: oklch(0.15 0.035 130);
-    --bg: oklch(0.2 0.035 130);
-    --bg-light: oklch(0.25 0.035 130);
-    --text: oklch(0.96 0.07 130);
-    --text-muted: oklch(0.76 0.07 130);
-    --highlight: oklch(0.5 0.07 130);
-    --border: oklch(0.4 0.07 130);
-    --border-muted: oklch(0.3 0.07 130);
+    --bg-dark: oklch(0.15 0.01 130);
+    --bg: oklch(0.2 0.01 130);
+    --bg-light: oklch(0.25 0.01 130);
+    --text: oklch(0.96 0.02 130);
+    --text-muted: oklch(0.76 0.02 130);
+    --highlight: oklch(0.5 0.02 130);
+    --border: oklch(0.4 0.02 130);
+    --border-muted: oklch(0.3 0.02 130);
     --primary: oklch(0.76 0.1 130);
     --secondary: oklch(0.76 0.1 310);
-    --danger: oklch(0.7 0.07 30);
-    --warning: oklch(0.7 0.07 100);
-    --success: oklch(0.7 0.07 160);
-    --info: oklch(0.7 0.07 260);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
 
     --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
     --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
     --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
 
     --ff: "Manrope", sans-serif;
-    --h1: 700 1.5rem / 1.2em var(--ff);
-    --h2: 700 1.25rem / 1.2em var(--ff);
-    --h3: 700 1.125rem / 1.4em var(--ff);
-    --h4: 700 1rem / 1.6em var(--ff);
-    --p: 400 1rem / 1.6em var(--ff);
-    --span: 300 1rem / 1.2em var(--ff);
+    --h1: 800 1.5em var(--ff);
+    --h2: 700 1.4em var(--ff);
+    --h3: 600 1.4em var(--ff);
+    --h4: 600 1.3em var(--ff);
+    --p: 400 1.2em var(--ff);
+    --span: 300 1.2em var(--ff);
 }
 body.light {
     /* oklch */
-    --bg-dark: oklch(0.92 0.035 130);
-    --bg: oklch(0.96 0.035 130);
-    --bg-light: oklch(1 0.035 130);
-    --text: oklch(0.15 0.07 130);
-    --text-muted: oklch(0.4 0.07 130);
-    --highlight: oklch(1 0.07 130);
-    --border: oklch(0.6 0.07 130);
-    --border-muted: oklch(0.7 0.07 130);
+    --bg-dark: oklch(0.92 0.02 130);
+    --bg: oklch(0.94 0.02 130);
+    --bg-light: oklch(1 0.02 130);
+    --text: oklch(0.15 0.04 130);
+    --text-muted: oklch(0.4 0.04 130);
+    --highlight: oklch(1 0.06 130);
+    --border: oklch(0.6 0.06 130);
+    --border-muted: oklch(0.7 0.06 130);
     --primary: oklch(0.4 0.1 130);
     --secondary: oklch(0.4 0.1 310);
-    --danger: oklch(0.5 0.07 30);
-    --warning: oklch(0.5 0.07 100);
-    --success: oklch(0.5 0.07 160);
-    --info: oklch(0.5 0.07 260);
+    --danger: oklch(0.5 0.06 30);
+    --warning: oklch(0.5 0.06 100);
+    --success: oklch(0.5 0.06 160);
+    --info: oklch(0.5 0.06 260);
 
     --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
     --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
@@ -95,7 +95,12 @@ body {
     gap: 1em;
 }
 section {
-    width: min(1800px, 85vw);
+    /* width: min(1800px, 90vw); */
+    width: 1280px;
+    border: 1px solid var(--border-muted);
+}
+body.light section {
+    border: none;
 }
 
 

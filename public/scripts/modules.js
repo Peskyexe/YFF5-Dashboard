@@ -10,11 +10,25 @@ async function loadModules(preset) {
     const modulesToLoad = createModulesArray(preset);
     let modulesHTML = "";
     
-    modulesToLoad.forEach(moduleObject => {
-        const html = getModule(moduleObject)
+    let index;
+    modulesToLoad.forEach(function(moduleObject, index) {
+        const html = getModule(moduleObject, index + 1)
         html.then((value) => {
             modulesHTML += value;
             moduleContainer.innerHTML = modulesHTML;
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = value;
+
+            const scripts = tempDiv.querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.src = script.src;
+                newScript.type = script.type;
+                newScript.defer = script.defer;
+
+                document.head.appendChild(newScript);
+            });
         })
     });
 
@@ -36,8 +50,8 @@ async function loadModules(preset) {
 
 
 // Funksjon som henter in en module fra severen ved bruk av egen API
-async function getModule(moduleObject) {
-    const response = await fetch(`/api/module?id=${moduleObject.id}&version=${moduleObject.version}`);
+async function getModule(moduleObject, index) {
+    const response = await fetch(`/api/core/module?id=${moduleObject.id}&version=${moduleObject.version}&index=${index}`);
 
     if (!response.ok) {
         throw new Error("Network error");

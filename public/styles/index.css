@@ -66,15 +66,13 @@ nav button i {
     justify-content: center;
     align-items: center;
     border-radius: 0.75em;
+    box-shadow: var(--shadow);
 }
 .module p {
     font-size: 1.75em; 
     color: var(--bg-light);
 }
 
-#module-1 {
-    background-color: oklch(0.5 0.06 30);
-}
 #module-2 {
     background-color: oklch(0.5 0.06 90);
 }

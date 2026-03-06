@@ -1,0 +1,150 @@
+:root {
+    --weather-negative: oklch(0.5 0.09 260);
+    --weather-positive: oklch(0.5 0.09 30);
+}
+
+body.light {
+    --weather-negative: oklch(0.5 0.15 260);
+    --weather-positive: oklch(0.5 0.15 30);
+}
+
+
+.weatherapp .weatherapp-negative {
+    color: var(--weather-negative);
+}
+.weatherapp .weatherapp-positive {
+    color: var(--weather-positive);
+}
+.weatherapp-icon-big {
+    color: var(--text);
+    font-size: 1.25em;
+}
+.weatherapp-icon-bigger {
+    color: var(--text);
+    font-size: 1.75em;
+}
+.weatherapp-item-center {
+    justify-content: center;
+}
+.weatherapp-item-end {
+    justify-content: flex-end;
+}
+
+
+.weatherapp {
+    width: 100%;
+    border-radius: 0.75em;
+    list-style: none;
+    box-shadow: var(--shadow);
+    padding: 0.5em 1em;
+
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.weatherapp.large {
+    padding: 0.75em 1em;
+    gap: 2.5em;
+}
+
+
+/* Styling for delen som viser været akkurat nå */
+.weatherapp-current{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    flex: 1;
+    margin-bottom: 1.5em;
+}
+.weatherapp.large .weatherapp-current {
+    justify-content: flex-start;
+    margin: 0;
+    gap: 0.75em;
+    flex: 0;
+}
+
+.weatherapp-current > h3 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.weatherapp ul {
+    list-style: none;
+    display: flex;
+    gap: 0.75em;
+}
+.weatherapp.large ul {
+    gap: 2em;
+}
+
+.weatherapp li {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.weatherapp li div {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.weatherapp li h2 {
+    font-size: 2em;
+    line-height: 1em;
+}
+.weatherapp.large li h2 {
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.weatherapp-main span {
+    color: var(--text);
+}
+
+.weatherapp li span {
+    font-size: 1em;
+    align-self: flex-end;
+}
+
+
+/* Styling for tabelen som viser være over dagen */
+.weatherapp-table {
+    border-collapse: collapse;
+}
+
+
+.weatherapp-table tbody tr {
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+}
+body.light .weatherapp-table tbody tr {
+    border-top: 1px solid var(--bg);
+    border-bottom: 1px solid var(--bg);
+}
+
+.weatherapp-table th * {
+    color: var(--text);
+}
+
+.weatherapp-table-cell {
+    position: relative;
+    padding: 0.5em 0;
+}
+
+.weatherapp-table-cell-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherapp-table-cell-content-left {
+    justify-content: flex-start;
+}
+
+.weatherapp-table-cell-content-right {
+    justify-content: flex-end;
+}
