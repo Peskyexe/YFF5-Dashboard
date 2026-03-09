@@ -2,19 +2,19 @@
     "name": "Custom 1",
     "modules": {
         "module-1": {
-            "id": "id1",
+            "id": "id5",
             "version": "large"
         },
         "module-2": {
             "id": "id2",
-            "version": "wide"
+            "version": "tall"
         },
         "module-3": {
-            "id": "id3",
+            "id": "id1",
             "version": "small"
         },
         "module-4": {
-            "id": "id4",
+            "id": "id3",
             "version": "small"
         }
     },
@@ -23,12 +23,12 @@
             "column-1":"module-1",
             "column-2":"module-1",
             "column-3":"module-2",
-            "column-4":"module-2"
+            "column-4":"module-3"
         },
         "row-2": {
             "column-1":"module-1",
             "column-2":"module-1",
-            "column-3":"module-3",
+            "column-3":"module-2",
             "column-4":"module-4"
         }
     }

@@ -21,8 +21,6 @@ async function getWeather() {
         headers["If-Modified-Since"] = lastModified;
     }
 
-    return cache["data"];
-
     // Sender API forespørsel til MET
     const url = `${BASE_URL}?lat=${LATITUDE}&lon=${LONGITUDE}`
     const response = await fetch(url, { headers });

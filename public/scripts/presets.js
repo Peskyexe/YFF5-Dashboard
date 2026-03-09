@@ -3,8 +3,14 @@ import { loadModules } from "./modules.js";
 const presetDropdownItems = document.querySelectorAll(".dropdown-item")
 var activePreset = { };
 
-const defaultPresetId = "3";
-activePreset = await getPreset(defaultPresetId);
+const defaultPresetId = "0";
+
+let presetId = localStorage.getItem("presetId");
+if (!presetId) {
+    presetId = defaultPresetId;
+}
+
+activePreset = await getPreset(presetId);
 
 
 // Funksjon for å hente in en preset fra serveren ved bruk av egen API
@@ -22,6 +28,7 @@ async function getPreset(id) {
 
 // Funksjon som endrer det aktive presete
 async function changeActivePreset(newPresetId) {
+    localStorage.setItem("presetId", newPresetId);
     activePreset = await getPreset(newPresetId);
 }
 
