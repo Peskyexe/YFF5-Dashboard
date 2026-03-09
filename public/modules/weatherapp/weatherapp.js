@@ -1,5 +1,6 @@
 const weatherData = await getWeatherData();
 
+// Henter in vær data ved bruke av API-en jeg skrev selv, og MET sin API.
 async function getWeatherData() {
     const response = await fetch(`/api/modules/weatherapp/weather`);
     if (!response.ok) {
@@ -14,6 +15,7 @@ async function getWeatherData() {
 const weatherIconBaseDirectory = "modules/weatherapp/weather_icons/";
 let elementRefs = await loadElementRefs();
 
+// Laster in JSON filen som beskriver de forskjelige elementene
 async function loadElementRefs() {
     try {
         const response = await fetch("modules/weatherapp/elementRefs.json");
@@ -37,6 +39,7 @@ currentElements.forEach(element => {
     updateCurrentWeather(element);
 });
 
+// Henter inn elemente i "Været nå" delen
 function getCurrentElementsByRefs(refs, containers) {
     let elements = [];
 
@@ -53,6 +56,7 @@ function getCurrentElementsByRefs(refs, containers) {
     return elements;
 }
 
+// Oppdaterer "Været nå" delen
 function updateCurrentWeather(elements) {
     const weather = weatherData[0];
 
@@ -81,6 +85,7 @@ tableElements.forEach(element => {
     updateTableWeather(element);
 })
 
+// Henter inn alle elementene i en tabel og sortere dem i en array på en måte som lar meg let loope over rader.
 function getTableElementsByRefs(refs, tables) {
     let tablesElementsArray = []; // Tables
 
@@ -105,12 +110,14 @@ function getTableElementsByRefs(refs, tables) {
     return tablesElementsArray;
 }
 
+// Oppdaterer en hel tabel
 function updateTableWeather(table) {
     table.forEach(function(row, index) {
         updateTableRow(row, index);
     });
 }
 
+// Oppdatere en rad i tabelen
 function updateTableRow(row, rowIndex) {
     const weather = weatherData[rowIndex];
 
